@@ -205,10 +205,10 @@ class RecordTab implements \AOE\Linkhandler\TabHandlerInterface {
 				// Generate the record list:
 				// unfortunately we have to set weird dependencies.
 			/** @var \AOE\Linkhandler\Record\ElementBrowserRecordList $dblist */
-			$dblist = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('AOE\Linkhandler\Record\ElementBrowserRecordList');
+			$dblist = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('AOE\\Linkhandler\\Record\\ElementBrowserRecordList');
 			$dblist->setAddPassOnParameters($this->addPassOnParams);
 			$dblist->browselistObj = $this->browseLinksObj;
-			$dblist->this->pObjScript = $this->browseLinksObj->this->pObjScript;
+			$dblist->pObjScript = $this->browseLinksObj->pObjScript;
 			$dblist->backPath = $GLOBALS['BACK_PATH'];
 			$dblist->thumbs = 0;
 			$dblist->calcPerms = $GLOBALS['BE_USER']->calcPerms($pageinfo);
